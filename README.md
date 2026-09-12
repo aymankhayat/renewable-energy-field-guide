@@ -9,6 +9,7 @@ An interactive, cinematic guide to seven renewable energy sources: what each one
 ## Features
 
 - **Seven sources**: solar, wind, hydropower, geothermal, biomass, green hydrogen, and tidal & wave, each with its own photography, headline, and live canvas animation (solar corona, wind streamlines, electrolysis bubbles, a moonlit tide…)
+- **Solar panel planner**: share your location (or search a city, type coordinates, or pick a point on the map) to get the best panel tilt and direction for that exact spot, seasonal tilts, a live sun tracker with sunrise and sunset, and winter-safe row spacing. It all runs on the device with a clear-sky solar model, so the location is never sent anywhere. Idea by Emad Albalaa.
 - **Interactive atlas**: a draggable 3D globe or a flat map, shading countries by suitability and pinning landmark sites like NEOM, MeyGen, and The Geysers
 - **Regional fit**: rate every source for eight world regions; click any country on the map to jump to its region
 - **Metric / imperial toggle**: converts every physical figure (m ↔ ft, °C ↔ °F, ha ↔ acres, bar ↔ psi, and more)

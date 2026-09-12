@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { PointerEvent as ReactPointerEvent } from 'react';
+import type { MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from 'react';
 import {
   geoCentroid, geoDistance, geoGraticule10, geoInterpolate, geoNaturalEarth1, geoOrthographic, geoPath,
 } from 'd3-geo';
@@ -46,14 +46,19 @@ interface Tip { x: number; y: number; title: string; body: string }
 
 interface Props {
   source: EnergySource;
-  region: RegionKey;
   mode: MapMode;
-  onRegionSelect: (r: RegionKey) => void;
+  /** Region to outline; omit to outline nothing. */
+  region?: RegionKey;
+  onRegionSelect?: (r: RegionKey) => void;
+  /** When set, a click anywhere on the map picks a point instead of a region. */
+  onPick?: (coords: [number, number]) => void;
+  /** A picked point to mark, as [lon, lat]. */
+  pin?: [number, number];
 }
 
-export function WorldMap({ source, region, mode, onRegionSelect }: Props) {
+export function WorldMap({ source, region, mode, onRegionSelect, onPick, pin }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
-  const [center, setCenter] = useState<[number, number]>(REGION_CENTER[region]);
+  const [center, setCenter] = useState<[number, number]>(REGION_CENTER[region ?? 'mena']);
   const centerRef = useRef(center);
   centerRef.current = center;
   const drag = useRef<{ x: number; y: number; c: [number, number] } | null>(null);
@@ -86,7 +91,7 @@ export function WorldMap({ source, region, mode, onRegionSelect }: Props) {
 
   // Turn the globe to face the selected region.
   useEffect(() => {
-    if (mode !== 'globe') return;
+    if (mode !== 'globe' || !region) return;
     const target = REGION_CENTER[region];
     if (reduced) { setCenter(target); return; }
     const interp = geoInterpolate(centerRef.current, target);
@@ -146,6 +151,16 @@ export function WorldMap({ source, region, mode, onRegionSelect }: Props) {
   };
   const endDrag = () => { drag.current = null; };
 
+  // Turn a click into [lon, lat] when the map is being used as a picker.
+  const onSvgClick = (e: ReactMouseEvent<SVGSVGElement>) => {
+    if (!onPick || dragged.current) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = vb.x + ((e.clientX - r.left) / r.width) * vb.w;
+    const y = ((e.clientY - r.top) / r.height) * H;
+    const coords = projection.invert?.([x, y]);
+    if (coords && Number.isFinite(coords[0]) && Number.isFinite(coords[1])) onPick([coords[0], coords[1]]);
+  };
+
   const visible = (coords: [number, number]) =>
     mode === 'flat' || geoDistance(coords, centerRef.current) < Math.PI / 2 - 0.04;
 
@@ -164,6 +179,8 @@ export function WorldMap({ source, region, mode, onRegionSelect }: Props) {
         onPointerMove={onPointerMove}
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
+        onClick={onSvgClick}
+        className={onPick ? 'is-picker' : undefined}
       >
         <defs>
           <radialGradient id="ocean" cx="42%" cy="38%" r="70%">
@@ -189,14 +206,14 @@ export function WorldMap({ source, region, mode, onRegionSelect }: Props) {
               <path
                 key={`${c.id}-${i}`}
                 d={d}
-                className={`country${c.region === region ? ' in-region' : ''}`}
+                className={`country${region && c.region === region ? ' in-region' : ''}`}
                 style={tier ? { fill: source.color, fillOpacity: TIER_OPACITY[tier] } : undefined}
                 onPointerMove={e => {
                   if (drag.current) return;
                   const p = localPoint(e);
                   setTip({ ...p, title: c.name, body: `${tier ? TIER_LABEL[tier] : 'Limited'} for ${source.label.toLowerCase()} · ${REGION_LABEL[c.region]}` });
                 }}
-                onClick={() => { if (!dragged.current) onRegionSelect(c.region); }}
+                onClick={() => { if (!dragged.current && !onPick) onRegionSelect?.(c.region); }}
               />
             );
           })}
@@ -230,6 +247,16 @@ export function WorldMap({ source, region, mode, onRegionSelect }: Props) {
             );
           })}
         </g>
+
+        {pin && visible(pin) && (() => {
+          const pt = projection(pin);
+          return pt ? (
+            <g className="pick-pin" transform={`translate(${pt[0]},${pt[1]})`} aria-hidden="true">
+              <circle className="pick-pin-ring" r="14" />
+              <circle className="pick-pin-dot" r="6" />
+            </g>
+          ) : null;
+        })()}
       </svg>
 
       {tip && (

@@ -5,6 +5,7 @@ import type { UnitSystem } from '../lib/units';
 import { SourceIcon } from './Icons';
 import { FitDots, RegionPicker, Segmented } from './Controls';
 import { WorldMap, TIER_OPACITY } from './WorldMap';
+import { SolarPlanner } from './SolarPlanner';
 import type { MapMode } from './WorldMap';
 
 interface Props {
@@ -60,6 +61,8 @@ export function SourceSections({ source, units, region, onRegion, mapMode, onMap
           </dl>
         </div>
       </section>
+
+      {source.key === 'solar' && <SolarPlanner units={units} />}
 
       <section className="section atlas" id="atlas" aria-labelledby="atlas-title">
         <header className="section-head section-head--split">

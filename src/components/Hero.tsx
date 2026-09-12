@@ -117,11 +117,11 @@ export function Hero({ source, units, region, onSelect }: Props) {
             );
           })}
 
-          <a className="rig-cta" href="#atlas">
+          <a className="rig-cta" href={source.key === 'solar' ? '#planner' : '#atlas'}>
             <span className="rig-cta-arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" /></svg>
             </span>
-            <span>Explore<br />the atlas</span>
+            {source.key === 'solar' ? <span>Plan my<br />panels</span> : <span>Explore<br />the atlas</span>}
           </a>
         </div>
       </div>
