@@ -1,0 +1,128 @@
+{
+    "solar-hero":  {
+                       "title":  "Paneles solares en Cariñena, España, 2015-01-08, DD 02",
+                       "author":  "Diego Delso",
+                       "license":  "CC BY-SA 4.0",
+                       "licenseUrl":  "https://creativecommons.org/licenses/by-sa/4.0",
+                       "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Paneles_solares_en_Cari%C3%B1ena,_Espa%C3%B1a,_2015-01-08,_DD_02.JPG",
+                       "width":  2000,
+                       "height":  1333
+                   },
+    "solar-detail":  {
+                         "title":  "Gemasolar Thermosolar Plant 2",
+                         "author":  "kallerna",
+                         "license":  "CC BY-SA 4.0",
+                         "licenseUrl":  "https://creativecommons.org/licenses/by-sa/4.0",
+                         "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Gemasolar_Thermosolar_Plant_2.jpg",
+                         "width":  1100,
+                         "height":  597
+                     },
+    "wind-hero":  {
+                      "title":  "Windpark Ostbüren Sonnenuntergang IMGP2174 smial wp",
+                      "author":  "Smial",
+                      "license":  "FAL",
+                      "licenseUrl":  "http://artlibre.org/licence/lal/en",
+                      "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Windpark_Ostb%C3%BCren_Sonnenuntergang_IMGP2174_smial_wp.jpg",
+                      "width":  2000,
+                      "height":  1335
+                  },
+    "wind-detail":  {
+                        "title":  "Windmills D1-D4 - Thornton Bank",
+                        "author":  "Hans Hillewaert",
+                        "license":  "CC BY-SA 4.0",
+                        "licenseUrl":  "https://creativecommons.org/licenses/by-sa/4.0",
+                        "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Windmills_D1-D4_-_Thornton_Bank.jpg",
+                        "width":  1100,
+                        "height":  1740
+                    },
+    "hydro-hero":  {
+                       "title":  "SnowyHydro-Murray-1",
+                       "author":  "Martin Kraft",
+                       "license":  "CC BY-SA 3.0 de",
+                       "licenseUrl":  "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+                       "sourceUrl":  "https://commons.wikimedia.org/wiki/File:SnowyHydro-Murray-1.jpg",
+                       "width":  2000,
+                       "height":  1333
+                   },
+    "hydro-detail":  {
+                         "title":  "Assuan-Hochdamm 15",
+                         "author":  "Olaf Tausch",
+                         "license":  "CC BY 3.0",
+                         "licenseUrl":  "https://creativecommons.org/licenses/by/3.0",
+                         "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Assuan-Hochdamm_15.JPG",
+                         "width":  1100,
+                         "height":  825
+                     },
+    "geothermal-hero":  {
+                            "title":  "Krafla power plant - Kröflustöð",
+                            "author":  "Villy Fink Isaksen",
+                            "license":  "CC BY-SA 4.0",
+                            "licenseUrl":  "https://creativecommons.org/licenses/by-sa/4.0",
+                            "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Krafla_power_plant_-_Kr%C3%B6flust%C3%B6%C3%B0.jpg",
+                            "width":  2000,
+                            "height":  1333
+                        },
+    "geothermal-detail":  {
+                              "title":  "Bjarnarflag Geothermal Power Station and the Blue Lake, Iceland, 20240716 1412 1511",
+                              "author":  "Jakub Hałun",
+                              "license":  "CC BY 4.0",
+                              "licenseUrl":  "https://creativecommons.org/licenses/by/4.0",
+                              "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Bjarnarflag_Geothermal_Power_Station_and_the_Blue_Lake,_Iceland,_20240716_1412_1511.jpg",
+                              "width":  1100,
+                              "height":  734
+                          },
+    "biomass-hero":  {
+                         "title":  "Bagasse being loaded",
+                         "author":  "Jonathan Wilkins",
+                         "license":  "CC BY-SA 3.0",
+                         "licenseUrl":  "https://creativecommons.org/licenses/by-sa/3.0",
+                         "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Bagasse_being_loaded.jpg",
+                         "width":  2000,
+                         "height":  1322
+                     },
+    "biomass-detail":  {
+                           "title":  "Wood pellets-small huddle PNr°0108",
+                           "author":  "D-Kuru",
+                           "license":  "CC BY-SA 3.0 at",
+                           "licenseUrl":  "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+                           "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Wood_pellets-small_huddle_PNr%C2%B00108.jpg",
+                           "width":  1100,
+                           "height":  680
+                       },
+    "hydrogen-hero":  {
+                          "title":  "Liquid hydrogen storage tank at Launch Pad 39B",
+                          "author":  "TomFawls",
+                          "license":  "CC BY-SA 3.0",
+                          "licenseUrl":  "https://creativecommons.org/licenses/by-sa/3.0",
+                          "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Liquid_hydrogen_storage_tank_at_Launch_Pad_39B.jpg",
+                          "width":  2000,
+                          "height":  1333
+                      },
+    "hydrogen-detail":  {
+                            "title":  "Hydrogen electrolyser - Science Museum, London",
+                            "author":  "The wub",
+                            "license":  "CC BY-SA 4.0",
+                            "licenseUrl":  "https://creativecommons.org/licenses/by-sa/4.0",
+                            "sourceUrl":  "https://commons.wikimedia.org/wiki/File:Hydrogen_electrolyser_-_Science_Museum,_London.jpg",
+                            "width":  1100,
+                            "height":  1461
+                        },
+    "tidal-hero":  {
+                       "title":  "2010 mavericks competition edit1",
+                       "author":  "Shalom Jacobovitz (derivative work by Brocken Inaglory)",
+                       "license":  "CC BY-SA 2.0",
+                       "licenseUrl":  "https://creativecommons.org/licenses/by-sa/2.0",
+                       "sourceUrl":  "https://commons.wikimedia.org/wiki/File:2010_mavericks_competition_edit1.jpg",
+                       "width":  2000,
+                       "height":  1322
+                   },
+    "tidal-detail":  {
+                         "title":  "DEA 2274",
+                         "author":  "GreenWikiGuys",
+                         "license":  "CC BY-SA 4.0",
+                         "licenseUrl":  "https://creativecommons.org/licenses/by-sa/4.0",
+                         "sourceUrl":  "https://commons.wikimedia.org/wiki/File:DEA_2274.jpg",
+                         "width":  1100,
+                         "height":  733
+                     }
+}
