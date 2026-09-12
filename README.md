@@ -2,7 +2,7 @@
 
 An interactive, cinematic guide to seven renewable energy sources: what each one is, how we harvest it, and where on Earth it works best.
 
-**[Live Demo](DEMO_LINK_PLACEHOLDER)** · Designed and built by **Ayman Khayat**
+**[Live Demo](https://renewable-energy-field-guide.vercel.app)** · Designed and built by **Ayman Khayat**
 
 ![Screenshot](docs/screenshot.png)
 
