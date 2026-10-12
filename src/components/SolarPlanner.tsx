@@ -131,7 +131,6 @@ export function SolarPlanner({ units }: Props) {
           Share your location, search for a city, or pick a point on the map. The best angle and direction are worked out on your device from the sun’s path over a full year.
         </p>
         <p className="planner-credit">
-          <span className="planner-credit-item"><span className="planner-credit-role">Idea by</span> Emad Albalaa</span>
           <span className="planner-credit-item"><span className="planner-credit-role">Designed &amp; built by</span> Ayman Khayat</span>
         </p>
       </header>
